@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_06_155122) do
+ActiveRecord::Schema.define(version: 2019_10_09_093211) do
 
   create_table "admins", force: :cascade do |t|
     t.string "name"
@@ -101,6 +101,15 @@ ActiveRecord::Schema.define(version: 2019_10_06_155122) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "special_books", force: :cascade do |t|
+    t.integer "student_id", null: false
+    t.integer "book_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["book_id"], name: "index_special_books_on_book_id"
+    t.index ["student_id"], name: "index_special_books_on_student_id"
+  end
+
   create_table "students", force: :cascade do |t|
     t.string "email"
     t.string "name"
@@ -116,6 +125,8 @@ ActiveRecord::Schema.define(version: 2019_10_06_155122) do
     t.datetime "remember_created_at"
     t.string "google_token"
     t.string "google_refresh_token"
+    t.string "provider"
+    t.string "uid"
     t.index ["email"], name: "index_students_on_email", unique: true
     t.index ["reset_password_token"], name: "index_students_on_reset_password_token", unique: true
   end
@@ -137,4 +148,6 @@ ActiveRecord::Schema.define(version: 2019_10_06_155122) do
   add_foreign_key "checkouts", "students"
   add_foreign_key "hold_requests", "books"
   add_foreign_key "hold_requests", "students"
+  add_foreign_key "special_books", "books"
+  add_foreign_key "special_books", "students"
 end

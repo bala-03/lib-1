@@ -10,19 +10,26 @@
   </head>
 
   <body>
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+    <div class="flex flex-row" style="justify-content: end">
     <% if student_signed_in?%>
-    <%= link_to "Logout", destroy_student_session_path, method: :delete%>
+    <%= link_to "Logout", destroy_student_session_path, method: :delete, class:"p-r-sm"%>
     <%= link_to 'Back', students_path %>
     <%end%>
     <% if librarian_signed_in?%>
-    <%= link_to "Logout", destroy_librarian_session_path, method: :delete%>
+    <%= link_to "Logout", destroy_librarian_session_path, method: :delete,  class:"p-r-sm"%>
     <%= link_to 'Back', librarians_path %>
     <%end%>
         <% if admin_signed_in?%>
-    <%= link_to "Logout", destroy_librarian_session_path, method: :delete%>
+    <%= link_to "Logout", destroy_librarian_session_path, method: :delete,  class:"p-r-sm"%>
     <%= link_to 'Back', admins_path %>
     <%end%>
-
+    </div>
 
     <%= yield %>
   </body>
