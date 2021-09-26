@@ -39958,3 +39958,254 @@ Processing by BooksController#books_students as HTML
 Completed 200 OK in 190ms (Views: 168.5ms | ActiveRecord: 6.1ms | Allocations: 43261)
 
 
+Started GET "/books_students" for ::1 at 2021-09-26 18:16:44 +0530
+Processing by BooksController#books_students as HTML
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:22:in `books_students'
+  Rendering books/books_students.html.erb within layouts/application
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."library_id" IN (SELECT "libraries"."id" FROM "libraries" WHERE "libraries"."university" IN (SELECT "students"."university" FROM "students" WHERE "students"."email" = ?))[0m  [["email", "balakumarang03@gmail.com"]]
+  ↳ app/views/books/books_students.html.erb:38
+  [1m[36mLibrary Load (0.3ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mLibrary Load (0.3ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/books_students.html.erb:98
+  [1m[36mLibrary Load (0.3ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mLibrary Load (0.3ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mLibrary Load (0.3ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  Rendered books/books_students.html.erb within layouts/application (Duration: 36.1ms | Allocations: 12443)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 224ms (Views: 214.3ms | ActiveRecord: 3.3ms | Allocations: 49460)
+
+
+Started GET "/books_students" for ::1 at 2021-09-26 18:16:47 +0530
+Processing by BooksController#books_students as HTML
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:22:in `books_students'
+  Rendering books/books_students.html.erb within layouts/application
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."library_id" IN (SELECT "libraries"."id" FROM "libraries" WHERE "libraries"."university" IN (SELECT "students"."university" FROM "students" WHERE "students"."email" = ?))[0m  [["email", "balakumarang03@gmail.com"]]
+  ↳ app/views/books/books_students.html.erb:38
+  [1m[36mLibrary Load (0.2ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mLibrary Load (0.3ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/books_students.html.erb:98
+  [1m[36mLibrary Load (0.2ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mLibrary Load (0.3ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mLibrary Load (0.3ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  Rendered books/books_students.html.erb within layouts/application (Duration: 33.3ms | Allocations: 10998)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 124ms (Views: 118.1ms | ActiveRecord: 3.0ms | Allocations: 22471)
+
+
+Started GET "/books_students" for ::1 at 2021-09-26 18:17:44 +0530
+Processing by BooksController#books_students as HTML
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:22:in `books_students'
+  Rendering books/books_students.html.erb within layouts/application
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."library_id" IN (SELECT "libraries"."id" FROM "libraries" WHERE "libraries"."university" IN (SELECT "students"."university" FROM "students" WHERE "students"."email" = ?))[0m  [["email", "balakumarang03@gmail.com"]]
+  ↳ app/views/books/books_students.html.erb:38
+  [1m[36mLibrary Load (0.3ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mLibrary Load (0.3ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/books_students.html.erb:98
+  [1m[36mLibrary Load (0.2ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mLibrary Load (0.2ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mLibrary Load (0.4ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  Rendered books/books_students.html.erb within layouts/application (Duration: 30.5ms | Allocations: 10999)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 224ms (Views: 217.4ms | ActiveRecord: 3.0ms | Allocations: 46639)
+
+
+Started GET "/books_students" for ::1 at 2021-09-26 18:18:07 +0530
+Processing by BooksController#books_students as HTML
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:22:in `books_students'
+  Rendering books/books_students.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."library_id" IN (SELECT "libraries"."id" FROM "libraries" WHERE "libraries"."university" IN (SELECT "students"."university" FROM "students" WHERE "students"."email" = ?))[0m  [["email", "balakumarang03@gmail.com"]]
+  ↳ app/views/books/books_students.html.erb:38
+  [1m[36mLibrary Load (0.2ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mLibrary Load (0.2ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/books_students.html.erb:98
+  [1m[36mLibrary Load (0.3ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mLibrary Load (0.2ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mLibrary Load (0.2ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  Rendered books/books_students.html.erb within layouts/application (Duration: 30.1ms | Allocations: 12443)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 138ms (Views: 127.4ms | ActiveRecord: 3.9ms | Allocations: 25582)
+
+
+Started GET "/books_students" for ::1 at 2021-09-26 18:19:07 +0530
+Processing by BooksController#books_students as HTML
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:22:in `books_students'
+  Rendering books/books_students.html.erb within layouts/application
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."library_id" IN (SELECT "libraries"."id" FROM "libraries" WHERE "libraries"."university" IN (SELECT "students"."university" FROM "students" WHERE "students"."email" = ?))[0m  [["email", "balakumarang03@gmail.com"]]
+  ↳ app/views/books/books_students.html.erb:38
+  [1m[36mLibrary Load (0.3ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mLibrary Load (0.3ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/books_students.html.erb:98
+  [1m[36mLibrary Load (0.2ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mLibrary Load (0.4ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mLibrary Load (0.3ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  Rendered books/books_students.html.erb within layouts/application (Duration: 32.7ms | Allocations: 10998)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 204ms (Views: 196.9ms | ActiveRecord: 3.1ms | Allocations: 45581)
+
+
+Started GET "/books_students" for ::1 at 2021-09-26 18:19:45 +0530
+Processing by BooksController#books_students as HTML
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:22:in `books_students'
+  Rendering books/books_students.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."library_id" IN (SELECT "libraries"."id" FROM "libraries" WHERE "libraries"."university" IN (SELECT "students"."university" FROM "students" WHERE "students"."email" = ?))[0m  [["email", "balakumarang03@gmail.com"]]
+  ↳ app/views/books/books_students.html.erb:38
+  [1m[36mLibrary Load (0.2ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mLibrary Load (0.3ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:55
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/books_students.html.erb:98
+  [1m[36mLibrary Load (0.2ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mLibrary Load (0.5ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mCACHE Library Load (0.0ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  [1m[36mLibrary Load (0.3ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? ORDER BY "libraries"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/books_students.html.erb:110
+  Rendered books/books_students.html.erb within layouts/application (Duration: 208.4ms | Allocations: 12439)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 342ms (Views: 333.3ms | ActiveRecord: 2.9ms | Allocations: 25609)
+
+
+Started GET "/students" for ::1 at 2021-09-26 18:19:53 +0530
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/students/index.html.erb:7
+  Rendered students/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1504)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 95ms (Views: 91.1ms | ActiveRecord: 0.3ms | Allocations: 13160)
+
+
+Started GET "/student_libraries_index" for ::1 at 2021-09-26 18:19:55 +0530
+Processing by LibrariesController#student_libraries_index as HTML
+  Rendering libraries/student_libraries_index.erb within layouts/application
+  [1m[36mLibrary Load (0.4ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries"[0m
+  ↳ app/views/libraries/student_libraries_index.erb:16
+  Rendered libraries/student_libraries_index.erb within layouts/application (Duration: 3.1ms | Allocations: 1027)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 90ms (Views: 86.5ms | ActiveRecord: 0.7ms | Allocations: 13737)
+
+
+Started GET "/student_libraries_index" for ::1 at 2021-09-26 18:34:33 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LibrariesController#student_libraries_index as HTML
+  Rendering libraries/student_libraries_index.erb within layouts/application
+  [1m[36mLibrary Load (0.4ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries"[0m
+  ↳ app/views/libraries/student_libraries_index.erb:16
+  Rendered libraries/student_libraries_index.erb within layouts/application (Duration: 2.3ms | Allocations: 718)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 88ms (Views: 85.6ms | ActiveRecord: 0.8ms | Allocations: 12167)
+
+
